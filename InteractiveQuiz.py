@@ -1,7 +1,7 @@
 # Interactive Quiz
 # Practice Test Question (PSY101)
 
-import timeit
+#import timeit
 import time
 import random
 import datetime as dt
@@ -18,6 +18,7 @@ class StartQuiz(object):
         print("\n\tPSYCHOLOGY PRACTICE TEST\n")
         print("Question 1. Who is associated with the Psycoanalytic approach?")
         user_input = input("[ Enter]> ")
+
         # check if the user's input matches the correct anwer or not
         if user_input.lower() == "Freud".lower() or "Sigmund Freud".lower():
             print("That is Correct!")
@@ -36,18 +37,19 @@ class StartQuiz(object):
             viewResults.percentage(0)
             viewResults.correctAnswers(0)
         else:
-            print("Sorry, the correct answer is False.\n\tTheories do not try to explain only one event,\n\tbut a variety of diverse observations.")
+            print("Sorry, the correct answer is False.\n\tTheories do not try to explain only one event,\n\tbut a variety of diverse observations.\n")
             viewResults.incorrect(0)
             print()
+
             # a List of question object
             # object store the question Test displayed and,
             # along with the correct answer, multiple Choice options, alternate answers
-
         quizQuestions = [
             QuestionA("Question 3. ____ examines the role of mental processes on behavior.", "Cognitivism", [], [], []),
             QuestionA("Question 4. ____ seeks to uncover the general principles of learning that explain all behaviors and particularly observable behavior", "Behaviorism",[], [], []),
             QuestionA("Question 5. ____ is the scientific study of the mind", "Psychology",[], [], []),
         ]   
+
 
         # For loop to iterate over the quizQuestion List
         for question in quizQuestions:
@@ -92,8 +94,10 @@ class StartQuiz(object):
             QuestionB("Question 13. Which of the following is true?",["(a) Personality is inconsistent","(b) Personality is only psychological","(c) Personality is confined by actions and behaviors","(d) Personality is consistent"], "d", [],[])
         ]
 
+
         # For loop to iterate over the quizQuestion List & options
         for question in quizQuestions2:
+
             print(f"{question.questionText}")
             for option in question.multipleChoiceOptions:
                 print(option)
@@ -147,7 +151,17 @@ class StartQuiz(object):
             print()
         else:
             print("THE END")
-    
+
+
+            print('''
+        *******************************************************"
+        * Keglllar - Interactive Quiz  *
+        * https://github.com/Keglllar/Psychology-Test.git      *
+        * (c) 2023  *
+        *******************************************************
+        ''')
+
+        
 
 # Adding Multiple Question, Choice option and, 
 # question that has Alternative Correct Answers and,
